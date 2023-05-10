@@ -207,6 +207,16 @@
     All textual <input>, <textarea>, and <select> elements with the class .form-control have a width of 100%
 -->
 
+<!--
+    18. Line up Form Elements Responsively with Bootstrap
+
+    Now let's get your form input and your submission button on the same line. We'll do this the same way we have previously: by using a div element with the class row, and other div elements within it using the col-xs-* class.
+
+    Nest both your form's text input and submit button within a div with the class row. Nest your form's text input within a div with the class of col-xs-7. Nest your form's submit button in a div with the class col-xs-5.
+
+    This is the last challenge we'll do for our Cat Photo App for now. We hope you've enjoyed learning Font Awesome, Bootstrap, and responsive design.
+-->
+
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 <style>
   
@@ -264,8 +274,11 @@
         <div class="col-xs-4"><label><input type="checkbox" name="personality"> Lazy</label></div>
         <div class="col-xs-4"><label><input type="checkbox" name="personality"> Crazy</label></div>
     </div>
-    <input type="text" placeholder="cat photo URL" required class="form-control">
-    <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane">Submit</i></button>
+    
+    <div class="row">
+        <div class="col-xs-7"><input type="text" placeholder="cat photo URL" required class="form-control"></div>
+        <div class="col-xs-5"><button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane">Submit</i></button></div>
+    </div>
     
 </form>
 </div>
