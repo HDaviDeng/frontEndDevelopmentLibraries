@@ -210,7 +210,7 @@
 
 
 <!--
-Use @for to Create a Sass Loop
+5. Use @for to Create a Sass Loop
 
 The @for directive adds styles in a loop, bery similar to a for loop in JavaScript.
 
@@ -246,4 +246,43 @@ Write a @for directive that takes a variable $j that goes from 1 to 6.
 
 It should create 5 classes called .text-1 to .text-5 where each has a font-size set to 15px multiplied by the index.
 -->
-  
+
+<!--
+    Guideline from SASS Guideline
+
+    The @for loop might be useful when combined with CSS':nth-* pseudo-classes. Except for these scenarios, prefer an @each loop if you hace to iterate over something.
+
+    @for $i from 1 through 10 {
+        .foo:nth-of-type(#{$i}) {
+            border-color: hsl($i * 36, 50%, 50%);
+        }
+    }
+
+    Always use $i as a variable name to stick to the usual convention and unless you hace a really good reason to, never use tht to keyword: always use through. Many decelopers do not even know SASS offers this variation; using it might lead to confusion.
+
+    Also be sure to respect those guidlines to preserve readability:
+
+    Always an empty new line before @for;
+    Always an empty new line after the closing brace(}) unless the next line is a closing brace(}).
+-->
+
+<style type='text/scss'>
+    @for $j from 1 through 6 {
+      .text-#{$j} {
+        font-size: 15px * $j;
+      }
+    }
+    
+    </style>
+    
+    <p class="text-1">Hello</p>
+    <p class="text-2">Hello</p>
+    <p class="text-3">Hello</p>
+    <p class="text-4">Hello</p>
+    <p class="text-5">Hello</p>
+
+<!--
+    6. Use @each to Map Over Items in a List
+
+    
+-->
