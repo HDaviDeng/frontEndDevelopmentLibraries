@@ -6,11 +6,11 @@
 
     For instance, because JSX is a syntactic extension of JavaScript, you can actually write Javascript directly within JSX. To do this, you simply include the code you want to be treated as JavaScript within curly braces: {'this is treated as JavaScript code' }. Keep this in mind, since it's used in seceral future challenges.
 
-    However, because JSX is not valid JavaScript, JSX code must be compiled into JavaScript. The transpiler Babel is a popular tool for this process. For your conbenience, it's already added behind the scenes for these challenges. If you happen to write syntactically incalid JSX, you will see the first test in these challenges fail.
+    However, because JSX is not valid JavaScript, JSX code must be compiled into JavaScript. The transpiler Babel is a popular tool for this process. For your convenience, it's already added behind the scenes for these challenges. If you happen to write syntactically incalid JSX, you will see the first test in these challenges fail.
 
-    It's worth noting that under the hood the hallenges are calling ReactDOM.render(JSX, document.getElementByID('root')). This function call is what places your JSX into React's own lightweight representation of the DOM. React then uses snapshots of its own DOM to optimize updating only specific parts of the actual DOM.
+    It's worth noting that under the hood the challenges are calling ReactDOM.render(JSX, document.getElementByID('root')). This function call is what places your JSX into React's own lightweight representation of the DOM. React then uses snapshots of its own DOM to optimize updating only specific parts of the actual DOM.
 
-    The current code uses JSX to assign a div element to the constant JSX. Replace the dic with an h1 element and add the text Hello JSX! inside it.
+    The current code uses JSX to assign a div element to the constant JSX. Replace the div with an h1 element and add the text Hello JSX! inside it.
 */
 
 const JSX = <h1>Hello JSX!</h1>;
@@ -83,13 +83,31 @@ const JSX = (
 
 4. Render HTML Elements to the DOM
 
-Sp far, you've learned that JSX is a convenient tool to write readable HTML within JavaScript. With React, we can render this JSX directly to the HTML DOM using React's rendering API known as ReactDOM.
+So far, you've learned that JSX is a convenient tool to write readable HTML within JavaScript. With React, we can render this JSX directly to the HTML DOM using React's rendering API known as ReactDOM.
 
-ReactDOM offers a simple method to render React elements to the DOM which looks like this: ReactDOM.render(componentToRender, targetNode), where the first argument is the React element or component that you want to render, and the second argument is the DOM node that you want to render the component to.
+ReactDOM offers a simple method to render React elements to the DOM which looks like this: 
+
+ReactDOM.render(componentToRender, targetNode) 
+
+where the first argument is the React element or component that you want to render, and the second argument is the DOM node that you want to render the component to.
 
 As you would expect, ReactDOM.render() must be called after the JSX element declarations, just like how you must declare variables before using them.
 
 The code editor has a simple JSX componet. Use the ReactDOM.render() method to render this component to the page. You can pass defined JSX elements directly in as the first argument and use document.getElementById() to select the DOM node to render them to. There is a div with id='challenge-node' available for you to use. Make sure you don't change the JSX constant.
+*/}
+
+{/*
+Problem Explanation
+
+To render an element to the DOM, we use the following syntax:
+
+ReactDOM.render(<item to be rendered>, <where to be rendered>);
+
+Use the Document method getElementById() to target a specific node in the DOM
+
+document.getElementById(<target node>)
+
+Use the Document method getElementById() as an argument within the ReactDOM method render() to solve this challenge.
 */}
 
 const JSX = (
@@ -98,5 +116,7 @@ const JSX = (
       <p>Lets render this to the DOM</p>
     </div>
   );
+
+  ReactDOM.render(JSX, document.getElementById("challenge-node"));
 
   
