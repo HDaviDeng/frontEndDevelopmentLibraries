@@ -210,4 +210,57 @@ return (
   // Change code above this line
 }
 
+/**
+ * 8. Create a React Component
+ * 
+ * The other way to define a React component is with the ES6 class syntax. In the following example, Kitten extends React.Component:
+ * 
+ * class Kitten extends React.Component
+ *    constructor(props) {
+ *      super(props);
+ *    }
+ * 
+ *    render() {
+ *      return(
+ *        <h1>Hi</h1>
+ *      );
+ *    }
+ * }
+ * 
+ * This creates an ES66 class Kitten which extends the React.Component class. 
+ * 
+ * So the Kitten class now has access to many useful React features, such as local state and lifecycle hooks. Don't worry if you aren't familiar with these terms yet, they will be convered in greater detail in later challenges. 
+ * 
+ * Also notice the Kitten class has a  constructor defined within it that calls super(). It uses super() to call the constructor of the parent class, in this case React.Component. 
+ * 
+ * The constructor is a special method used during the initialization of objects that are created with the class keyword. It is best practice to call a component's constructor with super, and pass props to both. 
+ * 
+ * This makes sure the component is initialized properly. For now, know that it is standard for this code to be included. Soon you will see other uses for the constructor as well as props.
+ * 
+ * My Component is defined in the code editor using class syntax. Finish writing the render method so it returns a div element that contains an h1 with the text Hello React!
+ */
+/**
+ * Hint:
+ * 
+ * You're going to be seeing these React Class Components all the time, so now would be a great time to get comfortable with them. Remember in theis exercise you don't have to define the component, you just need to make a function return a little html in between the marked lines.
+ * Remember the previous section and return a "div" element which contains an "h1" with the text Hello Reace! 
+ * "div" element has a child so remember to closs all tags.
+ * 
+ * Note that you don't need to put quotes around the text, because when you are working with JSX it is treated as HTML. Also check to make sure your spelling, case, and punctuation are correct! If all this code looks strange, go check out some of the great material on JavaScript ES6 here on freeCodeCamp.
+ */
+
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    // Change code below this line
+    return (
+      <div>
+        <h1>Hello React!</h1>
+      </div>
+    );
+    // Change code above this line
+  }
+};
   
