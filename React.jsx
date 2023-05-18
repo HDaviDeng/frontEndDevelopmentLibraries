@@ -286,6 +286,11 @@ class MyComponent extends React.Component {
  * In the code editor, there is a simple functional component called ChildComponent and a class component called ParentComponent. Compose the two together by rendering the ChildComponent within the ParentComponent. Make sure to close the ChildComponent tag with a forward slash.
  * 
  * Note: ChildComponent is defined with an ES6 arrow function because this is a very common practice when using React. However, know that this is just a function. If you aren't familiar with the arrow function syntax, please refer to the JavaScript section.
+ * 
+ * Hints:
+ * Add the component to be rendered in the component in which it is to be rendered.
+ * Use JSX self closing tags.
+ * The component to be rendered is ChildComponent and it is to be rendered in ParentComponent.
  */
 
 const ChildComponent = () => {
@@ -305,7 +310,7 @@ class ParentComponent extends React.Component {
       <div>
         <h1>I am the parent</h1>
         { /* Change code below this line */ }
-
+        <ChildComponent />
 
         { /* Change code above this line */ }
       </div>
