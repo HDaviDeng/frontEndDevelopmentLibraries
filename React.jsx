@@ -317,3 +317,30 @@ class ParentComponent extends React.Component {
     );
   }
 };
+
+/**
+ * 10. Use React to Render Nested Components
+ * 
+ * The last challenge showed a simple way to compose two components, but there are many different ways you can compose components with React.
+ * 
+ * Component composition is one of React's powerful features. When you work with React, it is important to start thinking about your user interface in terms of components like the App example in the last challenge. You break down your UI into its basic building blocks, and those pieces become the components. This helps to separate the code responsible for the UI from the code responsible for handling your application logic. It can greatly simplify the development and maintenance of complex projects.
+ */
+
+/**
+ * There are two functional components defined in the code editor, called TypesOfFruit and Fruits. Take the TypesOfFruit component and compose it, or nest it, within the Fruits component. Then take the Fruits component and nest it within the TypesOfFood component. The result should be a child component, nested within a parent component, which is nested within a parent component of its own.
+ */
+
+/**
+ * Problem Explanation
+ * 
+ * You have learned in earlier lessons, that there are two ways to create a React component:
+ * 1, Stateless functional component - using a JavaScript function.
+ * 2, Define a React component using the ES6 syntax.
+ * 
+ * Hint:
+ * In this challenge, we hava defined two stateless functional components, i.e. using JS functions. Recall, once a component has been created, it can be rendered in the same way as an HTML tag, by using the component name inside HTML opening and closing breakets. For example, to nest a component called Dog inside a parent component called Animals, you's simply return the Dog component from the Animals component like this:
+ * 
+ * return <Dog />
+ * 
+ * Try this with the TypesOfFruit and Fruits components.
+ */
