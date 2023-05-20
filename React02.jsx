@@ -70,4 +70,39 @@ ReactDOM.render(<MyComponent/>, document.getElementById("challenge-node"));
  * const Welcome = (props) => <h1>Hello, {props.user}!</h1>
  * 
  * It is standard to call this value props and when dealing with stateless functional components, you basically consider it as an argument to a function which returns JSX. You can access the value of the argument in the function body. With class components, you will see this is a little different.
-*/
+ */
+
+/**
+ * Hint:
+ * 
+ * Define a prop named date in the Calendar component as follows:
+ * <CurrentDate date={Date()} /}
+ * 
+ * The syntax prop.propName is used to render a prop.
+ */
+
+const CurrentDate = (props) => {
+    return (
+      <div>
+        { /* Change code below this line */ }
+        <p>The current date is: {props.date}</p>
+        { /* Change code above this line */ }
+      </div>
+    );
+  };
+  
+  class Calendar extends React.Component {
+    constructor(props) {
+      super(props);
+    }
+    render() {
+      return (
+        <div>
+          <h3>What date is it?</h3>
+          { /* Change code below this line */ }
+          <CurrentDate date={Date()}/>
+          { /* Change code above this line */ }
+        </div>
+      );
+    }
+  };
