@@ -108,7 +108,7 @@ const CurrentDate = (props) => {
   };
 
 /**
- * 3. Pass an Array as Props
+ * //3. Pass an Array as Props
  * 
  * The last challenge demonstrated how to pass information from a parent component to a child component as props or properties. This challenge looks at how arrays can be passed as props. To pass an array to a JSX element, it must be treated as JavaScript and wrapped in curly braces.
  * 
@@ -153,3 +153,23 @@ const List = (props) => {
       );
     }
   };
+
+
+/**
+ * //4. Use Default Props
+ * 
+ * React also has an option to set default props. You can assign default props to a component as a property on the component itself and React assigns the default prop if necessary. This allows you to specify what a prop value should be if no value is explicitly provided. For example, if you declare MyComponent.defaultProps = { location:'San Francisco' }, you have defined a location prop that's set to the string San Francisco, unless you specify otherwise. React assigns default props if props are undefined, but if you pass null as the value for a prop, it will remain null.
+ */
+
+/**
+ * The code editor shows a ShoppingCart component. Define default props on this component which specify a prop items with a value of 0.
+ */
+
+const ShoppingCart = (props) => {
+    return (
+      <div>
+        <h1>Shopping Cart Component</h1>
+      </div>
+    )
+  };
+  // Change code below this line
