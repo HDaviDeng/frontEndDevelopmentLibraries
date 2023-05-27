@@ -176,3 +176,5 @@ const ShoppingCart = (props) => {
 
 
 // Got DC with a small bumpy airplane. Which is a new experience for sure
+
+// Finally back. I thought I could update my files everyday at least once. But I definately overlooked my ability. It was a very nice trip though
